@@ -1,0 +1,61 @@
+.card-resumo {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.9),
+    rgba(17, 24, 39, 0.9)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 24px;
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-resumo:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.titulo-resumo {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.valor-resumo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+/* Barras de destaque */
+.card-resumo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.card-resumo.receita::after {
+  box-shadow: inset 4px 0 0 #22c55e;
+}
+
+.card-resumo.despesa::after {
+  box-shadow: inset 4px 0 0 #ef4444;
+}
+
+.card-resumo.investimento::after {
+  box-shadow: inset 4px 0 0 #d4af37;
+}

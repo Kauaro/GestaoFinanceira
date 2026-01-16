@@ -1,0 +1,57 @@
+html {
+    background-color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+    background:
+    linear-gradient(135deg, rgba(2,6,23,0.6), rgba(15,23,42,0.6)),
+    url('../../images/fundo02.jpg') center/cover no-repeat;
+}
+
+.container-dashboard {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 24px;
+
+  
+}
+
+.header-dashboard {
+  margin-bottom: 48px;
+  padding: 24px;
+
+}
+
+.header-dashboard h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #f9fafb;
+}
+
+.header-dashboard p {
+  font-size: 15px;
+  margin: 0;
+  color: #d1d5db;
+  font-weight: 400;
+}
+
+.container-dashboard h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  color: #f9fafb;
+}
+
+.container-dashboard h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  color: #f9fafb;
+}
+
+.cards-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}

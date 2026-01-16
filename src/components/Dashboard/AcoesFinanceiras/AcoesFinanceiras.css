@@ -1,0 +1,44 @@
+.acoes-financeiras {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.botao-acao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Cores sem exagero (sofisticado) */
+.botao-acao.ganho {
+  background: linear-gradient(135deg, #1f4e7a, #1f7a4d);
+  color: #65b48d;
+}
+
+.botao-acao.despesa {
+  background: linear-gradient(135deg, #83aace, #7f1d1d);
+  color: #fdecec;
+}
+
+.botao-acao.investimento {
+  background: linear-gradient(135deg, #3730a3, #7f1d1d);
+  color: #fdecec;
+}
+
+.botao-acao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
