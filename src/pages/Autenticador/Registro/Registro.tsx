@@ -42,7 +42,7 @@ export default function Registro() {
     }
 
     try {
-      await api.post("/usuarios", {
+      await api.post("/autenticar/cadastro", {
         nome: name,
         email: email,
         senha: password,
@@ -101,6 +101,7 @@ export default function Registro() {
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
+                  id="password"
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                 />
@@ -120,6 +121,7 @@ export default function Registro() {
                 <input
                   type={showConfirm ? "text" : "password"}
                   value={confirmPassword}
+                  id="confirmPassword"
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="••••••••"
                 />

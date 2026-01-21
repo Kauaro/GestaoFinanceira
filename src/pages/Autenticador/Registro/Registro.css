@@ -71,14 +71,15 @@
 }
 
 .form-group input:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
 }
 
 .password-wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
+  
 }
 
 .toggle-password {

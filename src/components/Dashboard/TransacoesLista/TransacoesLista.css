@@ -50,3 +50,46 @@
   color: #9ca3af;
   text-align: right;
 }
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .container-transacoes {
+    margin-top: 24px;
+    padding: 16px;
+  }
+
+  .container-transacoes h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .item-transacao {
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-transacoes {
+    margin-top: 16px;
+    padding: 12px;
+  }
+
+  .container-transacoes h2 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .item-transacao {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px 0;
+    font-size: 11px;
+  }
+
+  .data-transacao {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-top: 4px;
+  }
+}

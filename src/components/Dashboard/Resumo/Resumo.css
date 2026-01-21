@@ -59,3 +59,34 @@
 .card-resumo.investimento::after {
   box-shadow: inset 4px 0 0 #d4af37;
 }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .card-resumo {
+    padding: 16px;
+    min-width: 200px;
+  }
+
+  .valor-resumo {
+    font-size: 24px;
+  }
+
+  .titulo-resumo {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-resumo {
+    padding: 12px;
+    min-width: auto;
+  }
+
+  .valor-resumo {
+    font-size: 20px;
+  }
+
+  .titulo-resumo {
+    font-size: 11px;
+  }
+}

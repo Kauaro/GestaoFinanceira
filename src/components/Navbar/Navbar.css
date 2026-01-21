@@ -26,3 +26,31 @@
   color: #e5e7eb;
   letter-spacing: 0.3px;
 }
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    height: 56px;
+  }
+
+  .navbar-content {
+    padding: 0 16px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 50px;
+  }
+
+  .navbar-content {
+    padding: 0 12px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+}

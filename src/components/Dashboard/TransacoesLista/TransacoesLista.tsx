@@ -24,7 +24,7 @@ export default function ListaTransacoes({ transacoes }: Props) {
             <span className={item.tipo}>
               {item.tipo === "despesa" ? "-" : "+"} R$ {item.valor}
             </span>
-            <span className="data-transacao">{item.data}</span>
+            <span className="data-transacao">{new Date(item.data).toLocaleDateString("pt-BR")}</span>
           </li>
         ))}
       </ul>

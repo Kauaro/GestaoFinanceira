@@ -1,0 +1,234 @@
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== SCROLL CUSTOMIZADO ===== */
+::-webkit-scrollbar {
+  width: clamp(4px, 1vw, 8px);
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* ===== FONT SIZE FLUIDO ===== */
+html {
+  /* Escalamento responsivo: min 14px para mobiles, max 16px para desktops */
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* ===== RESPONSIVIDADE GERAL ===== */
+@media (max-width: 1200px) {
+  html {
+    font-size: clamp(13.5px, 1.1vw, 15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: clamp(13px, 1vw, 14.5px);
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: clamp(12.5px, 0.9vw, 14px);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: clamp(12px, 0.8vw, 13px);
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: clamp(11px, 0.7vw, 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: clamp(10px, 0.6vw, 11px);
+  }
+
+  body {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: clamp(9px, 0.5vw, 10px);
+  }
+}
+
+/* ===== BOTÕES RESPONSIVOS ===== */
+button {
+  font-size: inherit;
+  min-height: clamp(36px, 8vw, 44px);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  button {
+    min-height: clamp(40px, 9vw, 48px);
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    min-height: clamp(36px, 8vw, 44px);
+  }
+}
+
+/* ===== INPUTS E SELECTS ===== */
+input, select, textarea {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: clamp(12px, 2vw, 16px);
+    min-height: clamp(40px, 9vw, 48px);
+  }
+}
+
+@media (max-width: 480px) {
+  input, select, textarea {
+    font-size: clamp(11px, 1.8vw, 14px);
+    min-height: clamp(36px, 8vw, 44px);
+  }
+}
+
+/* ===== TEXTOS RESPONSIVOS ===== */
+h1 {
+  font-size: clamp(24px, 6vw, 40px);
+}
+
+h2 {
+  font-size: clamp(20px, 5vw, 32px);
+}
+
+h3 {
+  font-size: clamp(18px, 4vw, 28px);
+}
+
+h4 {
+  font-size: clamp(16px, 3.5vw, 24px);
+}
+
+h5 {
+  font-size: clamp(14px, 3vw, 20px);
+}
+
+h6 {
+  font-size: clamp(12px, 2.5vw, 18px);
+}
+
+p {
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: clamp(1.4, 2vw, 1.6);
+}
+
+small {
+  font-size: clamp(10px, 1.2vw, 13px);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: clamp(20px, 5vw, 28px); }
+  h2 { font-size: clamp(18px, 4.5vw, 24px); }
+  h3 { font-size: clamp(16px, 4vw, 20px); }
+  h4 { font-size: clamp(14px, 3.5vw, 18px); }
+  h5 { font-size: clamp(12px, 3vw, 16px); }
+  h6 { font-size: clamp(11px, 2.5vw, 14px); }
+  p { font-size: clamp(11px, 1.4vw, 13px); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: clamp(16px, 4.5vw, 20px); }
+  h2 { font-size: clamp(14px, 4vw, 18px); }
+  h3 { font-size: clamp(13px, 3.5vw, 16px); }
+  h4 { font-size: clamp(12px, 3vw, 14px); }
+  h5 { font-size: clamp(11px, 2.5vw, 13px); }
+  h6 { font-size: clamp(10px, 2vw, 12px); }
+  p { font-size: clamp(10px, 1.2vw, 12px); }
+}
+
+/* ===== ESPAÇAMENTOS RESPONSIVOS ===== */
+.container {
+  padding: clamp(12px, 3vw, 24px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: clamp(8px, 2.5vw, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: clamp(6px, 2vw, 12px);
+  }
+}
+
+/* ===== TOUCH TARGETS MÍNIMOS ===== */
+@media (max-width: 768px) {
+  a, button, input[type="button"], input[type="checkbox"], input[type="radio"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ===== OVERFLOW SAFE ===== */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* ===== MEDIA QUERY PRINT ===== */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .sidebar, .navbar, .footer {
+    display: none;
+  }
+}
