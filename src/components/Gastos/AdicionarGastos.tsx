@@ -80,6 +80,7 @@ export default function AdicionarGastos() {
             <option value="Alimentação">Alimentação</option>
             <option value="Transporte">Transporte</option>
             <option value="Moradia">Moradia</option>
+            <option value="Beleza">Beleza</option>
             <option value="Saúde">Saúde</option>
             <option value="Educação">Educação</option>
             <option value="Lazer">Lazer</option>
