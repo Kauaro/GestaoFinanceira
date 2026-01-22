@@ -21,7 +21,7 @@ html {
   margin: 0 auto;
   padding: clamp(16px, 5vw, 40px);
   overflow-y: auto;
-  margin-left: 200px;
+  margin-left: 220px;
 }
 
 .header-dashboard {

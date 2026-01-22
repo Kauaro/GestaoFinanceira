@@ -7,6 +7,7 @@ import {
   Settings, 
   LogOut 
 } from "lucide-react";
+import Logo from "../../images/logo.png";
 
 import SidebarItem from "./SidebarItem";
 import "./Sidebar.css";
@@ -15,10 +16,12 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-topo">
-        <h2 className="sidebar-logo">MinhasFinanças</h2>
+        
+        
       </div>
 
       <nav className="sidebar-menu">
+        <img src={Logo} alt="Logo MinhasFinanças" className="sidebar-logo-imagem" />
         <SidebarItem to="/dashboard" icon={<LayoutDashboard size={20} />} label="Dashboard" />
         <SidebarItem to="/gastos" icon={<TrendingDown size={20} />} label="Gastos" />
         <SidebarItem to="/ganhos" icon={<TrendingUp size={20} />} label="Ganhos" />

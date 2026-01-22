@@ -192,3 +192,11 @@
     height: 16px;
   }
 }
+
+
+
+.sidebar-logo-imagem {
+  width: 50px;
+  height: auto;
+  margin-bottom: 200px;
+}

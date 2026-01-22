@@ -23,7 +23,7 @@
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid #334155;
-  background: #020617;
+  background: rgba(2, 6, 23);
   color: #fff;
   outline: none;
   transition: border 0.2s ease, box-shadow 0.2s;

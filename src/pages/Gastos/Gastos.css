@@ -166,7 +166,7 @@
 
 .container-gastos-lista {
   margin-top: 40px;
-  background: rgba(17, 24, 39, 0.9);
+  background: rgba(17, 24, 39, 0.4);
   backdrop-filter: blur(10px);
   padding: 24px;
   border-radius: 18px;
