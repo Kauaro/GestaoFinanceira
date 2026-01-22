@@ -199,9 +199,14 @@ small {
 
 /* ===== TOUCH TARGETS MÍNIMOS ===== */
 @media (max-width: 768px) {
-  a, button, input[type="button"], input[type="checkbox"], input[type="radio"] {
+  a, button, input[type="button"] {
     min-width: 44px;
     min-height: 44px;
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    min-width: auto;
+    min-height: auto;
   }
 }
 
