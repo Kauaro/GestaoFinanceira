@@ -4,7 +4,8 @@ interface Transacao {
   id: number;
   descricao: string;
   valor: number;
-  tipo: "receita" | "despesa";
+  tipo: "receita" | "despesa" | "investimento";
+  categoria: string;
   data: string;
 }
 
@@ -20,10 +21,21 @@ export default function ListaTransacoes({ transacoes }: Props) {
       <ul className="lista-transacoes">
         {transacoes.map((item) => (
           <li key={item.id} className="item-transacao">
-            <span>{item.descricao}</span>
-            <span className={item.tipo}>
-              {item.tipo === "despesa" ? "-" : "+"} R$ {item.valor}
+            <div className="item-info">
+              <span className="item-descricao">{item.descricao}</span>
+              <span className="item-categoria">{item.categoria}</span>
+            </div>
+
+            <span className={`tipo-transacao ${item.tipo}`}>
+              {item.tipo === "receita" && "Ganho"}
+              {item.tipo === "despesa" && "Gasto"}
+              {item.tipo === "investimento" && "Investimento"}
             </span>
+
+            <span className={`valor-transacao ${item.tipo}`}>
+              {item.tipo === "despesa" ? "-" : "+"} R$ {item.valor.toFixed(2)}
+            </span>
+            
             <span className="data-transacao">{new Date(item.data).toLocaleDateString("pt-BR")}</span>
           </li>
         ))}

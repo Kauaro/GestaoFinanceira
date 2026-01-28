@@ -13,12 +13,14 @@ import Footer from "../../components/Footer/Footer";
 
 import { totalMesAtual as totalGanhosMes, listarGanhos } from "../../services/ganhos";
 import { totalMesAtual as totalGastosMes, listarGastos } from "../../services/gastos";
+import { obterInvestimentos } from "../../services/investimento";
 
 type Transacao = {
   id: number;
   descricao: string;
   valor: number;
-  tipo: "receita" | "despesa";
+  tipo: "receita" | "despesa" | "investimento";
+  categoria: string;
   data: string;
 };
 
@@ -34,6 +36,7 @@ export default function Dashboard({
   const [nomeUsuario, setNomeUsuario] = useState("");
   const [ganhosMes, setGanhosMes] = useState(0);
   const [gastosMes, setGastosMes] = useState(0);
+  const [investimentosMes, setInvestimentosMes] = useState(0);
   const [saldoAtual, setSaldoAtual] = useState(0);
   const [transacoes, setTransacoes] = useState<Transacao[]>([]);
   const [loading, setLoading] = useState(true);
@@ -53,6 +56,11 @@ export default function Dashboard({
       setGastosMes(totalGastos);
       setSaldoAtual(totalGanhos - totalGastos);
 
+      // 🔥 Investimentos
+      const investimentos = await obterInvestimentos();
+      const totalInvestimentos = investimentos.reduce((acc: number, inv: any) => acc + inv.valorAplicado, 0);
+      setInvestimentosMes(totalInvestimentos);
+
       // 🔥 Últimas transações
       const ganhos = await listarGanhos();
       const gastos = await listarGastos();
@@ -62,6 +70,7 @@ export default function Dashboard({
         descricao: g.descricao,
         valor: g.valor,
         tipo: "receita",
+        categoria: g.categoria,
         data: g.dataGanho,
       }));
 
@@ -70,10 +79,20 @@ export default function Dashboard({
         descricao: g.descricao,
         valor: g.valor,
         tipo: "despesa",
+        categoria: g.categoria,
         data: g.dataGasto,
       }));
 
-      const todas = [...listaGanhos, ...listaGastos].sort(
+      const listaInvestimentos: Transacao[] = investimentos.map((inv: any) => ({
+        id: inv.id,
+        descricao: inv.descricao,
+        valor: inv.valorAplicado,
+        tipo: "investimento",
+        categoria: inv.categoria,
+        data: inv.dataAplicacao,
+      }));
+
+      const todas = [...listaGanhos, ...listaGastos, ...listaInvestimentos].sort(
         (a, b) => new Date(b.data).getTime() - new Date(a.data).getTime()
       );
 
@@ -123,7 +142,7 @@ export default function Dashboard({
 
             <ResumoCard
               titulo="Investimentos"
-              valor={`R$ 0.00`}
+              valor={`R$ ${investimentosMes.toFixed(2)}`}
               tipo="investimento"
             />
           </div>

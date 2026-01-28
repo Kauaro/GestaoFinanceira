@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://apigestaofinanceira.onrender.com/",
+  baseURL: "http://localhost:5104/",
 });
 
 

@@ -21,34 +21,79 @@
 
 .item-transacao {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 110px 1fr 1fr;
   align-items: center;
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 14px;
+  gap: 16px;
 }
 
 .item-transacao:last-child {
   border-bottom: none;
 }
 
-.item-transacao span {
-  color: #e5e7eb;
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.item-transacao .receita {
+.item-descricao {
+  color: #f9fafb;
+  font-weight: 500;
+}
+
+.item-categoria {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.tipo-transacao {
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 12px;
+  min-width: 100px;
+}
+
+.tipo-transacao.receita {
   color: #22c55e;
-  font-weight: 600;
+  background: rgba(34, 197, 94, 0.1);
 }
 
-.item-transacao .despesa {
+.tipo-transacao.despesa {
   color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.tipo-transacao.investimento {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.valor-transacao {
   font-weight: 600;
+  text-align: right;
+}
+
+.valor-transacao.receita {
+  color: #22c55e;
+}
+
+.valor-transacao.despesa {
+  color: #ef4444;
+}
+
+.valor-transacao.investimento {
+  color: #6366f1;
 }
 
 .data-transacao {
   color: #9ca3af;
   text-align: right;
+  font-size: 13px;
 }
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
@@ -63,9 +108,24 @@
   }
 
   .item-transacao {
-    grid-template-columns: 1.5fr 1fr 0.8fr;
+    grid-template-columns: 2fr 90px 1fr;
+    gap: 12px;
     padding: 10px 0;
     font-size: 12px;
+  }
+
+  .item-categoria {
+    font-size: 11px;
+  }
+
+  .tipo-transacao {
+    font-size: 11px;
+    padding: 4px 6px;
+    min-width: 80px;
+  }
+
+  .data-transacao {
+    font-size: 11px;
   }
 }
 
@@ -84,12 +144,26 @@
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     padding: 8px 0;
-    font-size: 11px;
+    font-size: 10px;
+  }
+
+  .item-info {
+    grid-column: 1 / -1;
+  }
+
+  .tipo-transacao {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .valor-transacao {
+    font-size: 10px;
   }
 
   .data-transacao {
     grid-column: 1 / -1;
     text-align: left;
     margin-top: 4px;
+    font-size: 10px;
   }
 }

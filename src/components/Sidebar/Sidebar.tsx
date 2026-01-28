@@ -26,11 +26,9 @@ export default function Sidebar() {
         <SidebarItem to="/gastos" icon={<TrendingDown size={20} />} label="Gastos" />
         <SidebarItem to="/ganhos" icon={<TrendingUp size={20} />} label="Ganhos" />
         <SidebarItem to="/investimentos" icon={<PiggyBank size={20} />} label="Investimentos" />
-        <SidebarItem to="/cartoes" icon={<CreditCard size={20} />} label="Cartões" />
       </nav>
 
       <div className="sidebar-rodape">
-        <SidebarItem to="/configuracoes" icon={<Settings size={20} />} label="Configurações" />
         <SidebarItem to="/logout" icon={<LogOut size={20} />} label="Sair" />
       </div>
     </aside>

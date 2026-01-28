@@ -1,0 +1,130 @@
+.container-investimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1400px;
+  margin-top: 0;
+  
+}
+
+.header-investimentos {
+  margin-bottom: 24px;
+}
+
+.titulo-pagina {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0 0 8px 0;
+}
+
+.subtitulo-pagina {
+  font-size: 15px;
+  color: #d1d5db;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-formulario {
+  width: 100%;
+}
+
+.card-formulario,
+.card-lista {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.9),
+    rgba(17, 24, 39, 0.9)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-formulario:hover,
+.card-lista:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.titulo-card {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #f9fafb;
+}
+
+.container-investimentos-lista {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.9),
+    rgba(17, 24, 39, 0.9)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-investimentos-lista:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .container-investimentos {
+    gap: 20px;
+  }
+
+  .titulo-pagina {
+    font-size: 28px;
+  }
+
+  .card-formulario,
+  .card-lista,
+  .container-investimentos-lista {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-investimentos {
+    gap: 16px;
+  }
+
+  .titulo-pagina {
+    font-size: 24px;
+  }
+
+  .subtitulo-pagina {
+    font-size: 13px;
+  }
+
+  .titulo-card {
+    font-size: 16px;
+  }
+
+  .card-formulario,
+  .card-lista,
+  .container-investimentos-lista {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .header-investimentos {
+    margin-bottom: 16px;
+  }
+}
