@@ -3,8 +3,6 @@ import {
   TrendingDown, 
   TrendingUp, 
   PiggyBank, 
-  CreditCard, 
-  Settings, 
   LogOut 
 } from "lucide-react";
 import Logo from "../../images/logo.png";
