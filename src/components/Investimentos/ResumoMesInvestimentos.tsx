@@ -7,7 +7,6 @@ import { PiggyBank, ArrowRight, X } from "lucide-react";
 
 export default function ResumoMesInvestimentos() {
   const [totalMes, setTotalMes] = useState(0);
-  const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [valorRetirada, setValorRetirada] = useState("");
   const [origem, setOrigem] = useState<"investimento" | "cofrinho">("investimento");
@@ -22,8 +21,6 @@ export default function ResumoMesInvestimentos() {
         setTotalMes(total);
       } catch (error) {
         console.error("Erro ao carregar resumo de investimentos:", error);
-      } finally {
-        setLoading(false);
       }
     }
 
